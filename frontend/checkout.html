@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Gadget Trade Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: var(--light-bg, #f3f4f6); color: var(--dark-text, #1f2937); font-family: 'Inter', sans-serif; margin: 0;">
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--white, #ffffff); border-bottom: 1px solid var(--border-color, #e5e7eb);">
+        <a href="index.html" class="logo" style="text-decoration: none; font-size: 1.5rem; font-weight: bold; color: var(--primary-color, #0eb076);">Gadget Trade Hub</a>
+        <nav class="nav-links" style="display: flex; gap: 1.5rem;">
+            <a href="sell.html" style="text-decoration: none; color: var(--dark-text, #1f2937); font-weight: 500;">Sell Phone</a>
+            <a href="store.html" style="text-decoration: none; color: var(--dark-text, #1f2937); font-weight: 500;">Buy Refurbished</a>
+        </nav>
+        <div class="auth-buttons" style="display: flex; gap: 1rem;">
+            <a href="cart.html" class="btn btn-outline" id="cart-btn" style="text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--primary-color, #0eb076); color: var(--primary-color, #0eb076); border-radius: 4px; font-weight: 500;">Cart (<span id="cart-count">0</span>)</a>
+            <a href="dashboard.html" class="btn btn-primary" style="text-decoration: none; padding: 0.5rem 1rem; background: var(--primary-color, #0eb076); color: var(--white, #ffffff); border-radius: 4px; font-weight: 500;">My Account</a>
+        </div>
+    </header>
+
+    <main style="max-width: 800px; margin: 2rem auto; padding: 0 1rem;">
+        <div class="card" style="background: var(--white, #ffffff); padding: 2.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--border-color, #e5e7eb);">
+            <h2 style="margin-top: 0; margin-bottom: 2rem; border-bottom: 2px solid var(--light-bg, #f3f4f6); padding-bottom: 1rem;">Checkout Process</h2>
+            <form id="checkout-form">
+                <div style="margin-bottom: 2.5rem;">
+                    <h3 style="color: var(--primary-color, #0eb076); margin-bottom: 1.5rem;">1. Shipping Address</h3>
+                    <div style="display: grid; gap: 1.5rem; grid-template-columns: 1fr 1fr;">
+                        <input type="text" id="fname" placeholder="First Name" class="input-group" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                        <input type="text" id="lname" placeholder="Last Name" class="input-group" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                        <input type="text" id="address" placeholder="Street Address" class="input-group" required style="grid-column: 1 / -1; width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                        <input type="text" id="city" placeholder="City" class="input-group" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                        <input type="text" id="zip" placeholder="Zip Code" class="input-group" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2.5rem;">
+                    <h3 style="color: var(--primary-color, #0eb076); margin-bottom: 1.5rem;">2. Payment Details</h3>
+                    <div style="display: flex; gap: 2rem; margin-bottom: 1.5rem;">
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="payment" value="credit" checked> Credit Card</label>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;"><input type="radio" name="payment" value="paypal"> PayPal</label>
+                    </div>
+                    <div style="display: grid; gap: 1.5rem;">
+                        <input type="text" id="ccnum" placeholder="Card Number (xxxx xxxx xxxx xxxx)" class="input-group" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <input type="text" id="exp" placeholder="MM/YY" class="input-group" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                            <input type="text" id="cvc" placeholder="CVC" class="input-group" required style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color, #e5e7eb); border-radius: 4px; box-sizing: border-box; font-family: inherit;">
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="form-error" style="color: #ef4444; background: #fee2e2; padding: 1rem; border-radius: 4px; display: none; margin-bottom: 1.5rem; border: 1px solid #fca5a5;">Please fill in all required fields to proceed.</div>
+
+                <div style="border-top: 2px solid var(--light-bg, #f3f4f6); padding-top: 1.5rem; margin-top: 1.5rem; display: flex; justify-content: flex-end;">
+                    <button type="submit" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 3rem; background: var(--primary-color, #0eb076); color: var(--white, #ffffff); border: none; border-radius: 4px; cursor: pointer; font-weight: bold; box-shadow: 0 4px 6px rgba(14, 176, 118, 0.2);">Place Order • $548.90</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
