@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate Device | Gadget Trade Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Gadget Trade Hub</a>
+        <nav class="nav-links">
+            <a href="sell.html" class="active" style="color: var(--accent-primary);">Sell Phone</a>
+            <a href="store.html">Buy Refurbished</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="register.html" class="btn btn-outline">Sign Up</a>
+        </div>
+    </header>
+
+    <main class="evaluate-page">
+        <div class="evaluate-header">
+            <h1>Tell us about your device</h1>
+            <p>Search your brand and model below.</p>
+        </div>
+        
+        <form action="dashboard.html" class="data-form">
+            
+            <!-- Card Group 1: Device Identity -->
+            <div class="form-card">
+                <h3>Device Identity</h3>
+                
+                <div class="input-group">
+                    <label>Select Brand</label>
+                    <select required>
+                        <option value="">-- Choose Brand --</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi (Redmi / Poco)</option>
+                        <option value="vivo">Vivo</option>
+                        <option value="oppo">Oppo</option>
+                        <option value="oneplus">OnePlus</option>
+                        <option value="realme">Realme</option>
+                        <option value="motorola">Motorola</option>
+                        <option value="google">Google Pixel</option>
+                        <option value="nothing">Nothing</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Device Model</label>
+                    <input list="phoneModels" name="model" id="model" placeholder="Start typing... (e.g., iPhone 13, Redmi Note 12)" required>
+                    
+                    <datalist id="phoneModels">
+                        <option value="iPhone 15 Pro Max">
+                        <option value="iPhone 15 Pro">
+                        <option value="iPhone 15">
+                        <option value="iPhone 14 Pro Max">
+                        <option value="iPhone 14">
+                        <option value="iPhone 13">
+                        <option value="iPhone 12">
+                        <option value="iPhone 11">
+                        
+                        <option value="Samsung Galaxy S24 Ultra">
+                        <option value="Samsung Galaxy S23">
+                        <option value="Samsung Galaxy S22">
+                        <option value="Samsung Galaxy Z Fold 5">
+                        <option value="Samsung Galaxy Z Flip 5">
+                        <option value="Samsung Galaxy A54">
+                        <option value="Samsung Galaxy M53">
+                        
+                        <option value="Redmi Note 13 Pro">
+                        <option value="Redmi Note 12 5G">
+                        <option value="Xiaomi 14">
+                        <option value="Poco X6 Pro">
+                        <option value="Redmi 12C">
+                        
+                        <option value="Vivo X100 Pro">
+                        <option value="Vivo V30">
+                        <option value="Vivo Y200">
+                        <option value="Vivo T2x 5G">
+                        
+                        <option value="Oppo Reno 11">
+                        <option value="Oppo Find N3 Flip">
+                        <option value="Oppo F25 Pro">
+                        <option value="Oppo A79">
+                        
+                        <option value="OnePlus 12">
+                        <option value="OnePlus 11R">
+                        <option value="OnePlus Nord CE 3">
+                        <option value="Realme 12 Pro">
+                        <option value="Realme Narzo 60">
+                        <option value="Google Pixel 8 Pro">
+                        <option value="Google Pixel 7a">
+                        <option value="Nothing Phone (2)">
+                        <option value="Motorola Edge 40">
+                    </datalist>
+                </div>
+            </div>
+
+            <!-- Card Group 2: Condition -->
+            <div class="form-card">
+                <h3>Condition</h3>
+                <div class="input-group">
+                    <label>Any scratches?</label>
+                    <div class="radio-group-cards">
+                        <label class="radio-card">
+                            <input type="radio" name="scratches" value="No" required>
+                            <span>No</span>
+                        </label>
+                        <label class="radio-card">
+                            <input type="radio" name="scratches" value="Yes">
+                            <span>Yes</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evaluate-cta">
+                <button type="submit" class="btn btn-primary">Get Price Quote</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Footer Service Cards -->
+    <footer class="trust-footer">
+        <div class="trust-card">
+            <span class="trust-icon">🔒</span>
+            <span>Secure Payments</span>
+        </div>
+        <div class="trust-card">
+            <span class="trust-icon">✅</span>
+            <span>Verified Refurbished</span>
+        </div>
+        <div class="trust-card">
+            <span class="trust-icon">🚚</span>
+            <span>Free Doorstep Pickup</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
