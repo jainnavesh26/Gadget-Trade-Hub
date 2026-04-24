@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 13 - Gadget Trade Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: var(--light-bg, #f3f4f6); color: var(--dark-text, #1f2937); font-family: 'Inter', sans-serif; margin: 0;">
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--white, #ffffff); border-bottom: 1px solid var(--border-color, #e5e7eb);">
+        <a href="index.html" class="logo" style="text-decoration: none; font-size: 1.5rem; font-weight: bold; color: var(--primary-color, #0eb076);">Gadget Trade Hub</a>
+        <nav class="nav-links" style="display: flex; gap: 1.5rem;">
+            <a href="sell.html" style="text-decoration: none; color: var(--dark-text, #1f2937); font-weight: 500;">Sell Phone</a>
+            <a href="store.html" style="text-decoration: none; color: var(--dark-text, #1f2937); font-weight: 500;">Buy Refurbished</a>
+        </nav>
+        <div class="auth-buttons" style="display: flex; gap: 1rem;">
+            <a href="cart.html" class="btn btn-outline" id="cart-btn" style="text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--primary-color, #0eb076); color: var(--primary-color, #0eb076); border-radius: 4px; font-weight: 500;">Cart (<span id="cart-count">0</span>)</a>
+            <a href="dashboard.html" class="btn btn-primary" style="text-decoration: none; padding: 0.5rem 1rem; background: var(--primary-color, #0eb076); color: var(--white, #ffffff); border-radius: 4px; font-weight: 500;">My Account</a>
+        </div>
+    </header>
+    
+    <main class="product-details-container" style="max-width: 1200px; margin: 2rem auto; padding: 0 1rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="product-image card" style="background: var(--white, #ffffff); border: 1px solid var(--border-color, #e5e7eb); border-radius: 8px; display: flex; justify-content: center; align-items: center; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <img src="https://images.unsplash.com/photo-1632661674596-df8be070a5c5?q=80&w=400&auto=format&fit=crop" alt="iPhone 13 Placeholder" style="max-width: 100%; border-radius: 8px;">
+        </div>
+        <div class="product-info card" style="background: var(--white, #ffffff); border: 1px solid var(--border-color, #e5e7eb); border-radius: 8px; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <h1 style="color: var(--dark-text, #1f2937); margin-top: 0; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                iPhone 13 
+                <span style="font-size: 0.9rem; background: var(--primary-color, #0eb076); color: var(--white, #ffffff); padding: 0.3rem 0.6rem; border-radius: 4px; font-weight: normal;">Refurbished - Excellent</span>
+            </h1>
+            <p style="font-size: 2rem; font-weight: bold; color: var(--dark-text, #1f2937); margin: 1rem 0;">$499.00</p>
+            
+            <div style="margin: 2rem 0;">
+                <h3 style="color: var(--dark-text, #1f2937); margin-bottom: 1rem;">Specifications</h3>
+                <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.8rem; color: var(--dark-text, #1f2937);">
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color, #e5e7eb); padding-bottom: 0.5rem;"><span>Storage:</span> <strong>128GB</strong></li>
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color, #e5e7eb); padding-bottom: 0.5rem;"><span>RAM:</span> <strong>4GB</strong></li>
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color, #e5e7eb); padding-bottom: 0.5rem;"><span>Battery Health:</span> <strong>92%</strong></li>
+                    <li style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-color, #e5e7eb); padding-bottom: 0.5rem;"><span>Color:</span> <strong>Midnight</strong></li>
+                </ul>
+            </div>
+            
+            <button class="btn btn-primary add-to-cart-btn" style="width: 100%; font-size: 1.1rem; padding: 1rem; background: var(--primary-color, #0eb076); color: var(--white, #ffffff); border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s;" onmouseover="this.style.backgroundColor='var(--primary-hover, #0b8f5f)'" onmouseout="this.style.backgroundColor='var(--primary-color, #0eb076)'">Add to Cart</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
