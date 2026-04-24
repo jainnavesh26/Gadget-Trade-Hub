@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Gadget Trade Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Admin specific styles overriding/adding to style.css */
+        .admin-container {
+            padding: 60px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--bg-surface);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-color);
+            margin-bottom: 50px;
+        }
+        .data-table th, .data-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .data-table th {
+            background-color: rgba(15, 23, 42, 0.5);
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        .data-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Gadget Trade Hub <span style="color: var(--accent-primary);">| Admin</span></a>
+        <nav class="nav-links">
+            <a href="index.html">Back to Site</a>
+        </nav>
+        <div class="auth-buttons">
+            <button onclick="logout()" class="btn btn-outline">Logout</button>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <h2 class="section-title" style="margin-bottom: 0;">Dashboard Overview</h2>
+        </div>
+
+        <h3>Recent Orders</h3>
+        <table class="data-table" id="orders-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Items</th>
+                    <th>Total Price</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="admin-orders-body">
+                <tr><td colspan="5" style="text-align: center;">Loading orders...</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Trade-In Requests</h3>
+        <table class="data-table" id="tradeins-table">
+            <thead>
+                <tr>
+                    <th>Req ID</th>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Scratches</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="admin-tradeins-body">
+                <tr><td colspan="5" style="text-align: center;">Loading trade-ins...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Trigger the fetch as soon as the admin page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchAdminData();
+        });
+    </script>
+</body>
+</html>
