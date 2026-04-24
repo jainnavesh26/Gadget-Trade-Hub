@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Successful - Gadget Trade Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: var(--light-bg, #f3f4f6); color: var(--dark-text, #1f2937); font-family: 'Inter', sans-serif; display: flex; flex-direction: column; min-height: 100vh; margin: 0;">
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: var(--white, #ffffff); border-bottom: 1px solid var(--border-color, #e5e7eb);">
+        <a href="index.html" class="logo" style="text-decoration: none; font-size: 1.5rem; font-weight: bold; color: var(--primary-color, #0eb076);">Gadget Trade Hub</a>
+        <nav class="nav-links" style="display: flex; gap: 1.5rem;">
+            <a href="sell.html" style="text-decoration: none; color: var(--dark-text, #1f2937); font-weight: 500;">Sell Phone</a>
+            <a href="store.html" style="text-decoration: none; color: var(--dark-text, #1f2937); font-weight: 500;">Buy Refurbished</a>
+        </nav>
+        <div class="auth-buttons" style="display: flex; gap: 1rem;">
+            <a href="cart.html" class="btn btn-outline" id="cart-btn" style="text-decoration: none; padding: 0.5rem 1rem; border: 1px solid var(--primary-color, #0eb076); color: var(--primary-color, #0eb076); border-radius: 4px; font-weight: 500;">Cart (<span id="cart-count">0</span>)</a>
+            <a href="dashboard.html" class="btn btn-primary" style="text-decoration: none; padding: 0.5rem 1rem; background: var(--primary-color, #0eb076); color: var(--white, #ffffff); border-radius: 4px; font-weight: 500;">My Account</a>
+        </div>
+    </header>
+
+    <main style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 2rem;">
+        <div class="card" style="background: var(--white, #ffffff); border: 1px solid var(--border-color, #e5e7eb); text-align: center; padding: 4rem 3rem; max-width: 500px; width: 100%; border-radius: 12px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);">
+            <div style="background-color: var(--primary-color, #0eb076); color: var(--white, #ffffff); width: 80px; height: 80px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 40px; margin: 0 auto 2rem; box-shadow: 0 4px 10px rgba(14, 176, 118, 0.3);">
+                ✓
+            </div>
+            <h1 style="margin-top: 0; color: var(--dark-text, #1f2937); font-size: 2rem;">Order Successful!</h1>
+            <p style="color: #6b7280; font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem;">Thank you for your purchase. We've received your order and our team is preparing it for shipment.</p>
+            
+            <div style="background-color: var(--light-bg, #f3f4f6); padding: 1.5rem; border-radius: 8px; margin-bottom: 2.5rem; border: 1px dashed var(--border-color, #e5e7eb);">
+                <p style="margin: 0; font-size: 1.1rem;"><strong>Order ID:</strong> <span style="color: var(--primary-color, #0eb076);">#GTH-84920</span></p>
+                <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #6b7280;">A confirmation email has been sent.</p>
+            </div>
+            
+            <a href="store.html" class="btn btn-primary" style="display: inline-block; background: var(--primary-color, #0eb076); color: var(--white, #ffffff); padding: 1rem 2rem; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.3s;">Return to Store</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
