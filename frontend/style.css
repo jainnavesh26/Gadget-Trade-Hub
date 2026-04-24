@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+
+:root {
+    --bg-page: #ffffff;
+    --bg-surface: #f8fafc;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --accent-primary: #10b981;
+    --accent-hover: #059669;
+    --border-color: #e2e8f0;
+    --shadow-soft: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-glow: 0 0 20px rgba(16, 185, 129, 0.3);
+    --transition-smooth: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-main);
+}
+
+/* Buttons */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--accent-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+/* Evaluate Form Layout */
+.evaluate-page {
+    padding: 60px 5%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.evaluate-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.evaluate-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.evaluate-header p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* Card Based Form */
+.form-card {
+    background-color: var(--bg-surface);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+}
+
+.form-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-soft);
+}
+
+.form-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group:last-child {
+    margin-bottom: 0;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.input-group select,
+.input-group input[type="text"],
+.input-group input[list] {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition-smooth);
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.input-group select:focus,
+.input-group input[type="text"]:focus,
+.input-group input[list]:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* Button-like Radio Options */
+.radio-group-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.radio-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: var(--bg-page);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: var(--transition-smooth);
+}
+
+.radio-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-card:hover {
+    border-color: #cbd5e1;
+    background-color: #f1f5f9;
+}
+
+.radio-card input[type="radio"]:checked + span {
+    color: var(--accent-primary);
+}
+
+.radio-card:has(input[type="radio"]:checked) {
+    border-color: var(--accent-primary);
+    background-color: rgba(16, 185, 129, 0.05);
+}
+
+.evaluate-cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.evaluate-cta .btn {
+    width: 100%;
+    max-width: 400px;
+    padding: 18px 30px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+}
+
+/* Trust Footer */
+.trust-footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 5%;
+    margin-top: 60px;
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    flex-wrap: wrap;
+}
+
+.trust-card {
+    background-color: var(--bg-page);
+    padding: 20px 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+    color: var(--text-main);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition-smooth);
+}
+
+.trust-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-soft);
+}
+
+.trust-icon {
+    font-size: 1.5rem;
+}
+
+/* Common overrides for other pages since we changed to light mode */
+.store-container, .admin-container {
+    padding: 60px 5%;
+}
+.filters {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 16px;
+}
+.product-card, .data-table {
+    background-color: var(--bg-page);
+    border: 1px solid var(--border-color);
+}
+.data-table th {
+    background-color: var(--bg-surface);
+    color: var(--text-muted);
+}
